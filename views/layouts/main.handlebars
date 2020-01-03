@@ -1,12 +1,21 @@
 <!-- views/layouts/main.handlebars -->
 <!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Rotten Potatoes</title>
-</head>
-<body>
-    {{{body}}}
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Rotten Potatoes</title>
+        <!-- Latest compiled and minified CSS -->
+        {{!-- <link rel="stylesheet" href="https://maxcdn.boostrapcdn.com/bootstrap/3.37/css/bootstrap.min.css"> --}}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        {{> navbar}}
+        <div class = "container">
+            {{{body}}}
+        </div>
+        
 
+        <!-- Latest compiled and minified JacaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.37/js/bootstrap.min.js"></script>
+    </body>
 </html>

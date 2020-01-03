@@ -1,46 +1,12 @@
 <!-- views/reviews-new.handlebars -->
-
-<form method ="POST" action ="/reviews">
-    {{> reviews-form}}
-
-    <!-- BUTTON -->
-    <p>
-        <button type="submit">Save Review</button>
-    </p>
-    {{!-- <fieldset>
-            <legend>New Review</legend>
-            <!-- TITLE -->
-            <p>
-                <label for "review-title">Title</label>
-                <input type="review-text" name="title" />
-            </p>
-            <!--MOVIE TITLE -->
-            <p>
-                <label for = "movieTitle">Movie Title</label><br>
-                <input type ="text" name="movieTitle" />
-            </p>
-            <!-- DESCRIPTION -->
-            <p>
-                <label for = "description-text">Description</label>
-                <textarea id="description-text" name = "description" rows = "10" /></textarea>
-            </p>
-            <!-- RATING -->
-            <p>
-                <label for = "movieRating">Rating</label>
-                <select type = "rating" name="movieRating">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </p>
-    </fieldset>
-
-    <!-- Button -->
-    <p>
-        <button type="submit">Save Review</button>
-    </p> --}}
-
-</form>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method ="POST" action ="/reviews">
+        {{> reviews-form}}
+        <!-- BUTTON -->
+            <div class="form-group">
+                <button class ="btn btn-primary" type="submit">Save Review</button>
+            </div>
+        </form>
+    </div>
+</div>
