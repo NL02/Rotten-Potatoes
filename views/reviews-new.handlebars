@@ -1,7 +1,13 @@
 <!-- views/reviews-new.handlebars -->
 
 <form method ="POST" action ="/reviews">
-    <fieldset>
+    {{> reviews-form}}
+
+    <!-- BUTTON -->
+    <p>
+        <button type="submit">Save Review</button>
+    </p>
+    {{!-- <fieldset>
             <legend>New Review</legend>
             <!-- TITLE -->
             <p>
@@ -35,6 +41,6 @@
     <!-- Button -->
     <p>
         <button type="submit">Save Review</button>
-    </p>
+    </p> --}}
 
 </form>
