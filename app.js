@@ -3,6 +3,8 @@ var exphbs = require('express-handlebars')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const app = express()
+const movies = require('./controllers/movies')(app)
 
 
 
@@ -14,7 +16,6 @@ const Review = mongoose.model('Review', {
     movieRating: String
 })
 
-const app = express()
 // override with POST having ?_method = DELETE or ?_method=PUT
 app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({ extended: true}))
@@ -57,7 +58,6 @@ app.get('/reviews/new', (req,res) => {
 //CREATE 
 app.post('/reviews', (req, res) => {
     Review.create(req.body).then((review) =>{
-        console.log(review)
         res.redirect(`/reviews/${review._id}`)
     }).catch((err) =>{
         console.log(err.message)
@@ -67,6 +67,7 @@ app.post('/reviews', (req, res) => {
 //SHOW 
 app.get('/reviews/:id', (req,res) => {
     Review.findById(req.params.id).then((review) =>{
+        console.log(review)
         res.render('reviews-show',{review: review})
     }).catch((err) => {
         console.log(err.message)
